@@ -8,7 +8,7 @@ public class Parrot {
     public void setHealth(int health){
         this.health=health;
     }
-    public void getHealth();
+    public int getHealth();
         return this.health;
 
     public void setEnergy(int energy){
@@ -22,4 +22,4 @@ public class Parrot {
         return this.energyProductionCoefficient;
     }
 
-}
+
