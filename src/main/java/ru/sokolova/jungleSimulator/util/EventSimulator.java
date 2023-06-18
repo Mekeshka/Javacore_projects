@@ -2,13 +2,11 @@ package ru.sokolova.jungleSimulator.util;
 
 import ru.sokolova.jungleSimulator.model.Parrot;
 
-public class EventProducer {
-    public void activateEvent(Parrot parrot) {
-        Math.random();
+public class EventSimulator {
+    public void startSimulation(Parrot parrot) {
         while (checkStatus(parrot)) {
             int eventChoose = (int) (Math.random() * 100);
-            if (eventChoose >= 0 && eventChoose < 8) ;
-            {
+            if (eventChoose >= 0 && eventChoose < 8) {
                 eatNuts(parrot);
             } else if (eventChoose >= 8 && eventChoose < 14) {
                 eatBerries(parrot);
@@ -22,7 +20,7 @@ public class EventProducer {
                 fly(parrot);
             } else if (eventChoose >= 50 && eventChoose < 54) {
                 fightOtherParrot(parrot);
-            }else if (eventChoose >= 54 && eventChoose < 64) {
+            } else if (eventChoose >= 54 && eventChoose < 64) {
                 sleepInNest(parrot);
             } else if (eventChoose >= 64 && eventChoose < 94) {
                 restOnBranch(parrot);
@@ -30,17 +28,21 @@ public class EventProducer {
                 wetFromRain(parrot);
             }
         }
-        System.out.println("Попугай погиб -_- очень жаль!);
+        System.out.println("Попугай погиб -_- очень жаль!");
     }
 
     private void eatNuts(Parrot parrot) {
         int energy = parrot.getEnergy();
         int health = parrot.getHealth();
-        energy = energy - 3;
+        energy = energy - 10;
         health = health + (int) (parrot.getBeak() * 3);
         setValueToHundred(parrot);
+        setValueToZero(parrot);
         parrot.setEnergy(energy);
         parrot.setHealth(health);
+        setValueToHundred(parrot);
+        setValueToZero(parrot);
+        System.out.println("Попугай нашел орехи, расколол и съел их. Текущая энергия: " +parrot.getEnergy() + " Текущее здоровье: " + parrot.getHealth());
         checkEnergy(parrot);
 
     }
@@ -48,92 +50,115 @@ public class EventProducer {
     private void eatBugs(Parrot parrot) {
         int energy = parrot.getEnergy();
         int health = parrot.getHealth();
-        energy = energy - 2;
+        setValueToHundred(parrot);
+        energy = energy - 15;
         health = health + (int) (parrot.getBeak() * 2);
         setValueToHundred(parrot);
+        setValueToZero(parrot);
         parrot.setEnergy(energy);
         parrot.setHealth(health);
+        setValueToHundred(parrot);
+        setValueToZero(parrot);
+        System.out.println("Попугай поймал жука и съел его. Текущая энергия: " +parrot.getEnergy() + " Текущее здоровье: " + parrot.getHealth());
         checkEnergy(parrot);
     }
 
     private void eatBerries(Parrot parrot) {
         int energy = parrot.getEnergy();
         int health = parrot.getHealth();
-        energy = energy - 1;
+        energy = energy - 10;
         health = health + (int) (parrot.getBeak() * 2);
         setValueToHundred(parrot);
+        setValueToZero(parrot);
         parrot.setEnergy(energy);
         parrot.setHealth(health);
+        setValueToHundred(parrot);
+        setValueToZero(parrot);
+        System.out.println("Попугай нашел ягоды и съел их. Текущая энергия: " +parrot.getEnergy() + " Текущее здоровье: " + parrot.getHealth());
         checkEnergy(parrot);
     }
 
     private void flyAwayFromCatcher(Parrot parrot) {
         int energy = parrot.getEnergy();
         int health = parrot.getHealth();
-        energy = energy - 5;
+        energy = energy - 30;
         setValueToHundred(parrot);
+        setValueToZero(parrot);
         parrot.setEnergy(energy);
         //parrot.setHealth(health);
+        setValueToHundred(parrot);
+        setValueToZero(parrot);
+        System.out.println("Попугай убежал от ловца. Текущая энергия: " +parrot.getEnergy() + " Текущее здоровье: " + parrot.getHealth());
         checkEnergy(parrot);
     }
 
     private void buildNest(Parrot parrot) {
         int energy = parrot.getEnergy();
-        //int health = parrot.getHealth();
-        energy = energy - 2;
+        energy = energy - 40;
+        setValueToZero(parrot);
         setValueToHundred(parrot);
         parrot.setEnergy(energy);
-        //parrot.setHealth(health);
+        setValueToHundred(parrot);
+        setValueToZero(parrot);
+        System.out.println("Попугай постоил гнездо. Текущая энергия: " +parrot.getEnergy() + " Текущее здоровье: " + parrot.getHealth());
         checkEnergy(parrot);
     }
 
     private void fly(Parrot parrot) {
         int energy = parrot.getEnergy();
-        //int health = parrot.getHealth();
-        energy = energy - 1;
+        energy = energy - 12;
         setValueToHundred(parrot);
+        setValueToZero(parrot);
         parrot.setEnergy(energy);
-        //parrot.setHealth(health);
+        setValueToHundred(parrot);
+        setValueToZero(parrot);
+        System.out.println("Попугай летает в поисках еды. Текущая энергия: " +parrot.getEnergy() + " Текущее здоровье: " + parrot.getHealth());
         checkEnergy(parrot);
     }
 
     private void fightOtherParrot(Parrot parrot) {
         int energy = parrot.getEnergy();
-        // int health = parrot.getHealth();
-        energy = energy - 7;
+        energy = energy - 40;
         setValueToHundred(parrot);
+        setValueToZero(parrot);
         parrot.setEnergy(energy);
-        //parrot.setHealth(health);
+        System.out.println("Попугай подрался с сородичем. Текущая энергия: " +parrot.getEnergy() + " Текущее здоровье: " + parrot.getHealth());
         checkEnergy(parrot);
     }
 
     private void sleepInNest(Parrot parrot) {
         int energy = parrot.getEnergy();
-        //int health = parrot.getHealth();
-        energy = energy + 5;
+        energy = energy + 10;
         setValueToHundred(parrot);
+        setValueToZero(parrot);
         parrot.setEnergy(energy);
-        //parrot.setHealth(health);
+        setValueToHundred(parrot);
+        setValueToZero(parrot);
+        System.out.println("Попугай спит в гнезде. Текущая энергия: " +parrot.getEnergy() + " Текущее здоровье: " + parrot.getHealth());
         checkEnergy(parrot);
     }
 
     private void restOnBranch(Parrot parrot) {
         int energy = parrot.getEnergy();
-        //int health = parrot.getHealth();
-        energy = energy + 4;
+        setValueToHundred(parrot);
+        energy = energy + 5;
         setValueToHundred(parrot);
         parrot.setEnergy(energy);
-        //parrot.setHealth(health);
+        setValueToHundred(parrot);
+        setValueToZero(parrot);
+        System.out.println("Попугай отдохнул на ветке. Текущая энергия: " +parrot.getEnergy() + " Текущее здоровье: " + parrot.getHealth());
         checkEnergy(parrot);
     }
 
     private void wetFromRain(Parrot parrot) {
         int energy = parrot.getEnergy();
-        //int health = parrot.getHealth();
-        energy = energy - 1;
+        setValueToHundred(parrot);
+        energy = energy - 10;
         setValueToHundred(parrot);
         parrot.setEnergy(energy);
-        //parrot.setHealth(health);
+        setValueToHundred(parrot);
+        setValueToZero(parrot);
+        System.out.println("Попугай промок под дождем. Текущая энергия: " +parrot.getEnergy() + " Текущее здоровье: " + parrot.getHealth());
         checkEnergy(parrot);
     }
 
@@ -160,14 +185,29 @@ public class EventProducer {
 
     private void setValueToHundred(Parrot parrot) {
         if (parrot.getEnergy() > 100) {
-            int energy = parrot.getEnergy();
+           int energy = 100;
+           parrot.setEnergy(energy);
         }
-        parrot.setEnergy() = 100;
 
         if (parrot.getHealth() > 100) {
-            int health = parrot.getHealth();
+            int health = 100;
+            parrot.setHealth(health);
         }
-        parrot.setHealth() = 100;
+
+
+    }
+    private void setValueToZero(Parrot parrot) {
+        if (parrot.getEnergy() <0) {
+            int energy = 0;
+            parrot.setEnergy(energy);
+        }
+
+        if (parrot.getHealth() < 0) {
+            int health = 0;
+            parrot.setHealth(health);
+        }
+
+
     }
 }
 
