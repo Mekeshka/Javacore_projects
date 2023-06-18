@@ -18,7 +18,7 @@ public class Parrot {
         return this.energy;
 
     }
-    public int getBeak(){
+    public double getBeak(){
         return this.energyProductionCoefficient;
     }
 
