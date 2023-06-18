@@ -10,111 +10,103 @@ public class EventProducer {
     private void eatNuts(Parrot parrot) {
         int energy = parrot.getEnergy();
         int health = parrot.getHealth();
-        energy = energy - 4;
-        if (energy > 100) {
-            energy = 100;
-        }
-
+        energy = energy - 3;
         health = health + (int) (parrot.getBeak()*3);
-        if (health>100){
-            health = 100;
-        }
+        setValueToHundred(parrot);
         parrot.setEnergy(energy);
         parrot.setHealth(health);
         energyChecker(parrot);
+
     }
 
     private void eatBugs(Parrot parrot) {
         int energy = parrot.getEnergy();
         int health = parrot.getHealth();
         energy = energy - 2;
-        if (energy > 100) {
-            energy = 100;
-        }
         health = health + (int) (parrot.getBeak()*2);
-        if (health>100) {
-            health = 100;
-            parrot.setEnergy(energy);
-            parrot.setHealth(health);
-            energyChecker(parrot);
-        }    }
+        setValueToHundred(parrot);
+        parrot.setEnergy(energy);
+        parrot.setHealth(health);
+        energyChecker(parrot);
+    }
     private void eatBerries(Parrot parrot) {
         int energy = parrot.getEnergy();
-        energy = energy + 3;
-        if (energy > 100) {
-            energy = 100;
-        }
+        int health = parrot.getHealth();
+        energy = energy - 1;
+        health = health + (int) (parrot.getBeak()*2);
+        setValueToHundred(parrot);
         parrot.setEnergy(energy);
+        parrot.setHealth(health);
         energyChecker(parrot);
     }
 
     private void flyAwayFromCatcher(Parrot parrot) {
+        int energy = parrot.getEnergy();
         int health = parrot.getHealth();
-        health=health-10;
-        if (health<0){
-        health=0;
-        }
-        parrot.setHealth(health);
+        energy = energy - 5;
+        setValueToHundred(parrot);
+        parrot.setEnergy(energy);
+        //parrot.setHealth(health);
         energyChecker(parrot);
     }
 
     private void buildNest(Parrot parrot) {
         int energy = parrot.getEnergy();
-        energy = energy - 5;
-        if (energy > 100) {
-            energy = 100;
-        }
+        //int health = parrot.getHealth();
+        energy = energy - 2;
+        setValueToHundred(parrot);
         parrot.setEnergy(energy);
+        //parrot.setHealth(health);
         energyChecker(parrot);
     }
 
     private void fly(Parrot parrot) {
         int energy = parrot.getEnergy();
-        energy = energy - 7;
-        if (energy > 100) {
-            energy = 100;
-        }
+        //int health = parrot.getHealth();
+        energy = energy - 1;
+        setValueToHundred(parrot);
         parrot.setEnergy(energy);
+        //parrot.setHealth(health);
         energyChecker(parrot);
     }
 
     private void fightOtherParrot(Parrot parrot) {
         int energy = parrot.getEnergy();
-        energy = energy - 8;
-        if (energy > 100) {
-            energy = 100;
-        }
+       // int health = parrot.getHealth();
+        energy = energy - 7;
+        setValueToHundred(parrot);
         parrot.setEnergy(energy);
+        //parrot.setHealth(health);
         energyChecker(parrot);
     }
 
     private void sleepInNest(Parrot parrot) {
         int energy = parrot.getEnergy();
-        energy = energy + 20;
-        if (energy > 100) {
-            energy = 100;
-        }
+        //int health = parrot.getHealth();
+        energy = energy + 5;
+        setValueToHundred(parrot);
         parrot.setEnergy(energy);
+        //parrot.setHealth(health);
         energyChecker(parrot);
     }
 
     private void restOnBranch(Parrot parrot) {
         int energy = parrot.getEnergy();
-        energy = energy + 6;
-        if (energy > 100) {
-            energy = 100;
-        }
+        //int health = parrot.getHealth();
+        energy = energy + 4;
+        setValueToHundred(parrot);
         parrot.setEnergy(energy);
+        //parrot.setHealth(health);
         energyChecker(parrot);
     }
 
     private void wetFromRain(Parrot parrot) {
         int energy = parrot.getEnergy();
-        energy = energy - 3;
-        if (energy > 100) {
-            energy = 100;
-        }
+        //int health = parrot.getHealth();
+        energy = energy - 1;
+        setValueToHundred(parrot);
         parrot.setEnergy(energy);
+        //parrot.setHealth(health);
         energyChecker(parrot);
     }
 
@@ -136,5 +128,14 @@ public class EventProducer {
         }
 
     }
+    private void setValueToHundred(Parrot parrot) {
+        if(parrot.getEnergy() >100){
+            int energy = parrot.getEnergy();
+            } parrot.setEnergy()=100;
 
-}
+        if (parrot.getHealth()>100){
+            int health = parrot.getHealth();
+            } parrot.setHealth()=100;
+        }
+    }
+
