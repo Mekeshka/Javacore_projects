@@ -49,7 +49,6 @@ public class EventSimulator {
     private void eatBugs(Parrot parrot) {
         int energy = parrot.getEnergy();
         int health = parrot.getHealth();
-        setValueToHundred(parrot);
         energy = energy - 20;
         health = health + (int) (parrot.getBeak() * 2);
         setValueToHundred(parrot);
@@ -93,8 +92,8 @@ public class EventSimulator {
     private void buildNest(Parrot parrot) {
         int energy = parrot.getEnergy();
         energy = energy - 45;
-        setValueToZero(parrot);
         setValueToHundred(parrot);
+        setValueToZero(parrot);
         parrot.setEnergy(energy);
         setValueToHundred(parrot);
         setValueToZero(parrot);
@@ -143,6 +142,7 @@ public class EventSimulator {
         setValueToHundred(parrot);
         energy = energy + 3;
         setValueToHundred(parrot);
+        setValueToZero(parrot);
         parrot.setEnergy(energy);
         setValueToHundred(parrot);
         setValueToZero(parrot);
@@ -155,6 +155,7 @@ public class EventSimulator {
         setValueToHundred(parrot);
         energy = energy - 13;
         setValueToHundred(parrot);
+        setValueToZero(parrot);
         parrot.setEnergy(energy);
         setValueToHundred(parrot);
         setValueToZero(parrot);
