@@ -1,11 +1,9 @@
-package ru.sokolova.jungleSimulator.model;
+package ru.sokolova.jungle_simulator.model;
 
 public class Parrot {
     private int health = 100;
     private int energy = 100;
-
     private final double energyProductionCoefficient = 1.5;
-
 
     public void setHealth(int health) {
         this.health = health;

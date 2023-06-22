@@ -1,7 +1,7 @@
-package ru.sokolova.jungleSimulator._main;
+package ru.sokolova.jungle_simulator._main;
 
-import ru.sokolova.jungleSimulator.model.Parrot;
-import ru.sokolova.jungleSimulator.util.EventSimulator;
+import ru.sokolova.jungle_simulator.model.Parrot;
+import ru.sokolova.jungle_simulator.util.EventSimulator;
 
 public class _Main {
     public static void main(String[] args) {
