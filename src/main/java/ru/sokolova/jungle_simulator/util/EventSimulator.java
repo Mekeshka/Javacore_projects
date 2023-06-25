@@ -36,8 +36,6 @@ public class EventSimulator {
         int health = parrot.getHealth();
         energy = energy - 15;
         health = health + (int) (parrot.getBeak() * 2);
-        setValueToHundred(parrot);
-        setValueToZero(parrot);
         parrot.setEnergy(energy);
         parrot.setHealth(health);
         setValueToHundred(parrot);
@@ -51,8 +49,6 @@ public class EventSimulator {
         int health = parrot.getHealth();
         energy = energy - 20;
         health = health + (int) (parrot.getBeak() * 2);
-        setValueToHundred(parrot);
-        setValueToZero(parrot);
         parrot.setEnergy(energy);
         parrot.setHealth(health);
         setValueToHundred(parrot);
@@ -66,8 +62,6 @@ public class EventSimulator {
         int health = parrot.getHealth();
         energy = energy - 15;
         health = health + (int) (parrot.getBeak() * 2);
-        setValueToHundred(parrot);
-        setValueToZero(parrot);
         parrot.setEnergy(energy);
         parrot.setHealth(health);
         setValueToHundred(parrot);
@@ -80,8 +74,6 @@ public class EventSimulator {
         int energy = parrot.getEnergy();
         int health = parrot.getHealth();
         energy = energy - 40;
-        setValueToHundred(parrot);
-        setValueToZero(parrot);
         parrot.setEnergy(energy);
         setValueToHundred(parrot);
         setValueToZero(parrot);
@@ -92,8 +84,6 @@ public class EventSimulator {
     private void buildNest(Parrot parrot) {
         int energy = parrot.getEnergy();
         energy = energy - 45;
-        setValueToHundred(parrot);
-        setValueToZero(parrot);
         parrot.setEnergy(energy);
         setValueToHundred(parrot);
         setValueToZero(parrot);
@@ -104,8 +94,6 @@ public class EventSimulator {
     private void fly(Parrot parrot) {
         int energy = parrot.getEnergy();
         energy = energy - 16;
-        setValueToHundred(parrot);
-        setValueToZero(parrot);
         parrot.setEnergy(energy);
         setValueToHundred(parrot);
         setValueToZero(parrot);
@@ -116,8 +104,6 @@ public class EventSimulator {
     private void fightOtherParrot(Parrot parrot) {
         int energy = parrot.getEnergy();
         energy = energy - 45;
-        setValueToHundred(parrot);
-        setValueToZero(parrot);
         parrot.setEnergy(energy);
         setValueToHundred(parrot);
         setValueToZero(parrot);
@@ -128,8 +114,6 @@ public class EventSimulator {
     private void sleepInNest(Parrot parrot) {
         int energy = parrot.getEnergy();
         energy = energy + 7;
-        setValueToHundred(parrot);
-        setValueToZero(parrot);
         parrot.setEnergy(energy);
         setValueToHundred(parrot);
         setValueToZero(parrot);
@@ -139,10 +123,7 @@ public class EventSimulator {
 
     private void restOnBranch(Parrot parrot) {
         int energy = parrot.getEnergy();
-        setValueToHundred(parrot);
         energy = energy + 3;
-        setValueToHundred(parrot);
-        setValueToZero(parrot);
         parrot.setEnergy(energy);
         setValueToHundred(parrot);
         setValueToZero(parrot);
@@ -152,10 +133,7 @@ public class EventSimulator {
 
     private void wetFromRain(Parrot parrot) {
         int energy = parrot.getEnergy();
-        setValueToHundred(parrot);
         energy = energy - 13;
-        setValueToHundred(parrot);
-        setValueToZero(parrot);
         parrot.setEnergy(energy);
         setValueToHundred(parrot);
         setValueToZero(parrot);
