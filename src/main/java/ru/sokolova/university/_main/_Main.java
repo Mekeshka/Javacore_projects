@@ -18,15 +18,13 @@ public class _Main {
         uni.setStudent(stud1);
         stud1.setProfessor(prof1);
         stud1.setUniversity(uni);
-        ProfessorDemonstrator PD = new ProfessorDemonstrator();
-        StudentDemonstrator SD = new StudentDemonstrator();
-        AttendDemonstrator AD = new AttendDemonstrator();
-        AD.demonstrateAttend(stud1);
-        AD.demonstrateAttend(prof1);
-        SD.demonstratePass(stud1);
-        PD.demonstrateEvaluate(prof1);
-
+        ProfessorDemonstrator professorDemonstrator = new ProfessorDemonstrator();
+        StudentDemonstrator studentDemonstrator = new StudentDemonstrator();
+        AttendDemonstrator attendDemonstrator = new AttendDemonstrator();
+        attendDemonstrator.demonstrateAttend(stud1);
+        attendDemonstrator.demonstrateAttend(prof1);
+        studentDemonstrator.demonstratePass(stud1);
+        professorDemonstrator.demonstrateEvaluate(prof1);
     }
-
 }
 
