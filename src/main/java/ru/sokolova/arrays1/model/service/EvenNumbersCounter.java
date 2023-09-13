@@ -8,7 +8,6 @@ public class EvenNumbersCounter {
                 evenCounter++;
             }
         }
-        System.out.println(evenCounter);
         return evenCounter;
     }
 }

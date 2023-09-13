@@ -1,24 +1,11 @@
 package ru.sokolova.arrays1._main;
 
-import ru.sokolova.arrays1.model.service.SumNumberCounter;
-import ru.sokolova.arrays1.model.service.ZeroNumbersCounter;
 import ru.sokolova.arrays1.view.ResultPrinter;
 
 public class _Main {
-
     public static void main(String[] args) {
-        int[] array = new int[]{2, 1, 5};
-//        OddNumbersFinder oddNumbersFinder = new OddNumbersFinder();
-//        oddNumbersFinder.findOddNumber(array);
-//        EvenNumbersFinder evenNumbersFinder = new EvenNumbersFinder();
-//        evenNumbersFinder.countEven(array);
-//        PrimeNumberFinder primeNumberFinder=new PrimeNumberFinder();
-//        primeNumberFinder.findPrimeNumber(array);
-        SumNumberCounter sumNumberCounter = new SumNumberCounter();
-        sumNumberCounter.countNumberSum(array);
-//        ZeroNumbersCounter zeroNumbersCounter = new ZeroNumbersCounter();
-//        zeroNumbersCounter.countZeroNumbers(array);
-//        ResultPrinter resultPrinter = new ResultPrinter();
-//        resultPrinter.printResult(array);
+        int[] array = new int[]{5, -3, 2, 1, 7, 11, 12, -4, 1, 10};
+        ResultPrinter resultPrinter = new ResultPrinter();
+        resultPrinter.printResult(array);
     }
 }
