@@ -15,7 +15,8 @@ public class PrimeNumberCounter {
                 }
             }
             System.out.println(primeNumberCounter);
-        } return primeNumberCounter;
+        }
+        return primeNumberCounter;
     }
 }
 
