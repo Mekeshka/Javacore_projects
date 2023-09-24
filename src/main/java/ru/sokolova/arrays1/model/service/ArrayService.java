@@ -1,5 +1,48 @@
 package ru.sokolova.arrays1.model.service;
+
 public class ArrayService {
+    public int countOddNumber(int[] arr) {
+        int oddCounter = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 == 0 & arr[i] != 0) {
+                oddCounter++;
+            }
+        }
+        return oddCounter;
+    }
+    public int countEvenNumber(int arr[]) {
+        int evenCounter = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 != 0 & arr[i] != 0) {
+                evenCounter++;
+            }
+        }
+        return evenCounter;
+    }
+    //    public int countPrimeNumber(int arr[]) {
+//        int primeNumberCounter = 0;
+//        for (int i = 0; i < arr.length; i++) {
+//            if (arr[i] < 2) {
+//                primeNumberCounter=int buffer;
+//            }
+//            for (int k = 2; k <= Math.sqrt(arr[i]); k++) {
+//                if (arr[i] % k == 0) {
+//                    primeNumberCounter;
+//                } else {
+//                    primeNumberCounter++;
+//                }
+//            }
+//        }
+//        System.out.println(primeNumberCounter);
+//        return primeNumberCounter;
+//    }
+    public int countNumberSum(int arr[]) {
+        int numberSum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            numberSum = numberSum + arr[i];
+        }
+        return numberSum;
+    }
     public int countDifferenceNumber(int arr[]) {
         int oddIndexSum = 0;
         int evenIndexSum = 0;
@@ -14,31 +57,6 @@ public class ArrayService {
         int difference = oddIndexSum - evenIndexSum;
         return difference;
     }
-    public int countEvenNumber(int arr[]) {
-        int evenCounter = 0;
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] % 2 != 0 & arr[i] != 0) {
-                evenCounter++;
-            }
-        }
-        return evenCounter;
-    }
-    public int countOddNumber(int[] arr) {
-        int oddCounter = 0;
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] % 2 == 0 & arr[i] != 0) {
-                oddCounter++;
-            }
-        }
-        return oddCounter;
-    }
-    public int countNumberSum(int arr[]) {
-        int numberSum = 0;
-        for (int i = 0; i < arr.length; i++) {
-            numberSum = numberSum + arr[i];
-        }
-        return numberSum;
-    }
     public int countZeroNumbers(int arr[]) {
         int zeroCounter = 0;
         for (int i = 0; i < arr.length; i++) {
@@ -48,7 +66,6 @@ public class ArrayService {
         }
         return zeroCounter;
     }
-
 }
 
 
