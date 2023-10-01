@@ -19,23 +19,19 @@ public class ArrayService {
         }
         return evenCounter;
     }
-    //    public int countPrimeNumber(int arr[]) {
-//        int primeNumberCounter = 0;
-//        for (int i = 0; i < arr.length; i++) {
-//            if (arr[i] < 2) {
-//                primeNumberCounter=int buffer;
-//            }
-//            for (int k = 2; k <= Math.sqrt(arr[i]); k++) {
-//                if (arr[i] % k == 0) {
-//                    primeNumberCounter;
-//                } else {
-//                    primeNumberCounter++;
-//                }
-//            }
-//        }
-//        System.out.println(primeNumberCounter);
-//        return primeNumberCounter;
-//    }
+    public int countPrimeNumber(int arr[]) {
+        int primeNumberCounter = 0;
+        for (int i = 0; i < arr.length; i++) {
+            for (int k = 2; k <= Math.sqrt(arr[i]); k++) {
+                if (arr[i] % k == 0) {
+                    break;
+                } else {
+                    primeNumberCounter++;
+                }
+            }
+        }
+        return primeNumberCounter;
+    }
     public int countNumberSum(int arr[]) {
         int numberSum = 0;
         for (int i = 0; i < arr.length; i++) {
