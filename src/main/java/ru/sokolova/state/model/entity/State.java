@@ -14,4 +14,7 @@ public class State {
         }
         return INSTANCE;
     }
+    private Region region;
+    private District district;
+    private City city;
 }
